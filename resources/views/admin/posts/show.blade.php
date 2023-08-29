@@ -19,8 +19,8 @@
                 </div>
                 <div class="col-12">
                     <strong>Tipologies:</strong>
-                    @if($post->type)
-                        {{ $post->type->name }}
+                    @if($post->types)
+                        {{ $post->types->name }}
                     @else
                         Senza Tipologia
                     @endif

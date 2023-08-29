@@ -50,11 +50,7 @@
                             <p>Seleziona le tecnologie</p>
                             @foreach($tecnologies as $tecnology)
                                 <div class="form-check @error('tecnology_id')is-invalid @enderror">
-                                    @if($errors->any())
-                                        <input type="checkbox" name="tecnologies[]" value="{{ $tecnology->id }}" {{ in_array($tecnology->id, old('tecnologies', [])) ? 'checked' : '' }}>
-                                    @else
-                                        <input type="checkbox" name="tecnologies[]" value="{{ $tecnology->id }}" {{ $tecnologies->contains($tecnology) ? 'checked' : '' }}>
-                                        @endif
+                                    <input type="checkbox" name="tecnologies[]" value="{{ $tecnology->id }}" {{ in_array($tecnology->id, old('tecnologies', [])) ? 'checked' : '' }}>
                                     <label class="form-check-label">
                                         {{ $tecnology->name }}
                                     </label>
@@ -77,3 +73,6 @@
         </div>
     </div>
 @endsection
+
+
+
