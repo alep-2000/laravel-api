@@ -11,7 +11,7 @@ use App\Models\Post;
 class PostController extends Controller
 {
     public function index(){
-        $posts = Post::with('types', 'tecnologies')->get();
+        $posts = Post::with('types', 'tecnologies')->paginate(6);
         return response()->json([
             'success'  => true,
             'results'  => $posts
