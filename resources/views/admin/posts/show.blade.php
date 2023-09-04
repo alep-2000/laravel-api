@@ -10,7 +10,7 @@
                             <h1> {{ $post->title }} </h1>
                         </div>
                         <div>
-                            <a href="{{ route('admin.posts.index') }} " class="btn btn-sm btn-primary">Tutti i Post</a>
+                            <a href="{{ route('admin.posts.index') }} " class="btn btn-sm btn-primary">Every Posts</a>
                         </div>
                     </div>
                 </div>
